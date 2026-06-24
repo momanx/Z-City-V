@@ -47,25 +47,14 @@ hook.Add("HG_PlayerFootstep_Notify", "HMCD_Professions_Abilities", function(ply,
 end)
 
 hook.Add("PlayerPostThink", "HMCD_Professions_Abilities", function(ply)
-	if(MODE.RoleChooseRoundTypes[MODE.Type])then
-		if(ply:Alive())then
-			if(ply.Profession == "medic")then
-				if(ply:KeyDown(IN_SPEED))then
-					if(ply:KeyPressed(IN_USE))then
+	if (MODE.RoleChooseRoundTypes[MODE.Type]) then
+		if (ply:Alive() and ply.Profession == "medic") then
+				if (ply:KeyDown(IN_SPEED) and ply:KeyPressed(IN_USE)) then -- there is certainly a better way to do this but i'm not figuring it out right now
 						local aim_ent, other_ply = MODE.GetPlayerTraceToOther(ply)
-						
-						if(IsValid(aim_ent))then
-							if(other_ply)then
-								MODE.DisplayOrganismInfo(other_ply.organism, ply)
-							end
+						if (IsValid(aim_ent) and other_ply) then
+							MODE.DisplayOrganismInfo(other_ply.organism, ply)
 						end
-					end
 				end
-			end
-			
-			if(ply.Profession == "huntsman")then
-				
-			end
 		end
 	end
 end)
