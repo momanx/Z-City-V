@@ -102,13 +102,13 @@ local function IsChokeZoneHit(ent, tr)
     if not IsValid(ent) then return false end
 
     if ent:IsNPC() then
-        if tr.HitGroup == HITGROUP_HEAD or tr.HitGroup == HITGROUP_NECK or tr.HitGroup == HITGROUP_CHEST then
+        if tr.HitGroup == HITGROUP_HEAD or tr.HitGroup == HITGROUP_CHEST then
             return true
         end
     end
 
     if ent:IsPlayer() then
-        if tr.HitGroup == HITGROUP_HEAD or tr.HitGroup == HITGROUP_NECK or tr.HitGroup == HITGROUP_CHEST then
+        if tr.HitGroup == HITGROUP_HEAD or tr.HitGroup == HITGROUP_CHEST then
             return true
         end
         local headBone = ent:LookupBone("ValveBiped.Bip01_Head1")
