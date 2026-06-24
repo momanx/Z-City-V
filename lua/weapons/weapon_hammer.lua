@@ -285,7 +285,7 @@ function SWEP:SecondaryAttack(override)
 				if Tr.Entity.LockedDoorNail then
 					if not Tr.Entity.LockedDoor and not Tr.Entity.LockedDoorMap then Tr.Entity:Fire("unlock", "", 0) end
 					Tr.Entity.LockedDoorNail = nil
-					Owner:SetAmmo(Owner:GetAmmoCount(self.Ammo) + (tr.Entity.CadedByBuilder and 2 or 3), self.Ammo)
+					Owner:SetAmmo(Owner:GetAmmoCount(self.Ammo) + (Tr.Entity.CadedByBuilder and 2 or 3), self.Ammo)
 					return
 				end
 
