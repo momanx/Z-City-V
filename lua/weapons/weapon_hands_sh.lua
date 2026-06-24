@@ -1315,10 +1315,10 @@ function SWEP:ApplyForce()
 							--ply:ChatPrint(org.pulse < 20 and "Barely can feel the pulse." or (org.pulse <= 50 and "Low pulse.") or (org.pulse <= 90 and "Normal pulse.") or "High pulse.")
 						end
 
-						if (org.last_heartbeat + 60) > CurTime() then
+						if (org.last_heartbeat + 60) > CurTime() and org.temperature > 35 then
 							ply:ChatPrint("The body is still warm.")
 						else
-							ply:ChatPrint((org.last_heartbeat + 180) < CurTime() and "The body has been here for awhile." or "The body is slightly warm")
+							ply:ChatPrint(((org.last_heartbeat + 180) < CurTime()) or (org.temperature < 35) and "The body is cold to the touch." or "The body is slightly warm")
 						end
 
 						if org.blood < 3500 then
