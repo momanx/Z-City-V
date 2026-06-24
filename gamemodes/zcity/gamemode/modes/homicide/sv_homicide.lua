@@ -398,7 +398,7 @@ function MODE.NormalizeProfessionId(profession_id)
 		return nil
 	end
 
-	if(sanitized_profession_id == "doctor")then
+	if(sanitized_profession_id == "medic")then
 		sanitized_profession_id = "medic"
 	end
 

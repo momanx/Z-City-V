@@ -61,7 +61,7 @@ function SWEP:Deploy()
 
 	if self.isFirstDeploy then
 		local owner = self:GetOwner()
-		if IsValid(owner) and owner.Profession == "doctor" then
+		if IsValid(owner) and owner.Profession == "medic" then
 			self.modeValuesdef = {
 				[1] = {150, true},
 			}

@@ -135,7 +135,7 @@ if SERVER then
 
 			if internalBleed > 0 then
 				local healed = math.max(internalBleed - self.modeValues[3], 0)
-				self.modeValues[3] = self.modeValues[3] - (internalBleed - healed) * (owner.Profession == "doctor" and 0.5 or 1)
+				self.modeValues[3] = self.modeValues[3] - (internalBleed - healed) * (owner.Profession == "medic" and 0.5 or 1)
 				org.internalBleedHeal = org.internalBleedHeal + (internalBleed - healed)
 				entOwner:EmitSound("snds_jack_gmod/ez_medical/" .. math.random(16, 18) .. ".wav", 60, math.random(95, 105))
 			end

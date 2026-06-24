@@ -336,7 +336,7 @@ function hg.GenerateLoot(ply,ent,func)
 	
 	Tab = "Weapons"
 	
-	//ply.Profession == "doctor"
+	//ply.Profession == "medic"
 	//ply.Profession == "engineer"
 	//ply.Profession == "huntsman"
 	//ply.Profession == "cook"

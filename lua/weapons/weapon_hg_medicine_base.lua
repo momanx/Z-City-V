@@ -322,7 +322,7 @@ if SERVER then
 				if self.modeValues[1] > 0 and #org.wounds > 0 then
 					local biggestWound = org.wounds[1][1]
 					local healedWound = math.max(biggestWound - self.modeValues[1], 0)
-					local woundHeal = self.modeValues[1] - (biggestWound - healedWound)-- * ((owner.Profession == "doctor") and 0.33 or 1)
+					local woundHeal = self.modeValues[1] - (biggestWound - healedWound)-- * ((owner.Profession == "medic") and 0.33 or 1)
 					org.bleed = math.max(org.bleed - (biggestWound - healedWound), 0)
 					org.wounds[1][1] = healedWound
 					self.modeValues[1] = woundHeal > 0.1 and woundHeal or 0
@@ -391,8 +391,8 @@ if SERVER then
 			end
 		end)
 
-		local who = (self:GetOwner() == org.owner) and "You" or ((owner.Profession == "doctor") and "A doctor" or "Someone")
-		local mul = ((owner.Profession == "doctor") and 0.2 or 1)
+		local who = (self:GetOwner() == org.owner) and "You" or ((owner.Profession == "medic") and "A doctor" or "Someone")
+		local mul = ((owner.Profession == "medic") and 0.2 or 1)
 		local amt = 25 * mul
 		if org.skull >= 0.6 and self.modeValues[1] >= amt then
 			org.skull = 0.59
