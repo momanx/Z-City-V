@@ -75,7 +75,7 @@ end
 local function pickHomelander()
     local candidates = {}
     for _, ply in player.Iterator() do
-        if ply:Team() == TEAM_SPECTATOR then continue end
+        if ply:Team() == TEAM_SPECTATOR or ply:GetInfoNum("hg_notraitor", 0) == 1 then continue end
         if not ply:Alive() then continue end
         candidates[#candidates + 1] = ply
     end

@@ -6,6 +6,10 @@ if not ConVarExists("hg_newspectate") then
     CreateClientConVar("hg_newspectate", "1", true, false, "Enables smooth spectator camera transitions", 0, 1)
 end
 
+if not ConVarExists("hg_notraitor") then
+	CreateClientConVar("hg_notraitor", "0", true, true, "When toggled on, you will not be picked for traitor in the relevant roundtypes.", 0, 1)
+end
+
 function CurrentRound()
 	return zb.modes[zb.CROUND]
 end
