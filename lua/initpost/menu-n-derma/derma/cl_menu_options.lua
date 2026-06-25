@@ -53,7 +53,6 @@ hg.settings:AddOpt("Gameplay","hg_showthoughts", "Show thoughts")
 hg.settings:AddOpt("Gameplay","hg_hints", "Show hints")
 hg.settings:AddOpt("Gameplay","hg_gary", "HG GARY")
 hg.settings:AddOpt("Gameplay","hg_deathfadeout", "Death fade out")
-hg.settings:AddOpt("Gameplay", "hg_notraitor", "Disable traitor selection")
 --hg_gary
 --hg_deathfadeout
 if not game.IsDedicated() then

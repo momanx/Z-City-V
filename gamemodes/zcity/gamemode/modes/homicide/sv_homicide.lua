@@ -1279,7 +1279,7 @@ function MODE:Intermission()
 	-- -- potom
 	
 	for i, ply in RandomPairs(player.GetAll()) do
-		if ply.isTraitor or ply:Team() == TEAM_SPECTATOR or ply:GetInfoNum("hg_notraitor", 0) == 1 then continue end
+		if ply.isTraitor or ply:Team() == TEAM_SPECTATOR then continue end
 		if math.random(100) > (ply.Karma or 100) then continue end
 
 		if traitors_needed > 0 then
