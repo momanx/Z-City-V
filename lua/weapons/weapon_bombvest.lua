@@ -39,19 +39,19 @@ end
 
 SWEP.Base="weapon_base"
 
-SWEP.ViewModel = "models/props_junk/cardboard_jox004a.mdl"
-SWEP.WorldModel = "models/props_junk/cardboard_jox004a.mdl"
+SWEP.ViewModel = ""
+SWEP.WorldModel = ""
 if(CLIENT)then SWEP.WepSelectIcon=surface.GetTextureID("vgui/wep_jack_hmcd_jihad");SWEP.BounceWeaponIcon=false end
 SWEP.PrintName = "Explosive Belt"
 SWEP.Instructions	= "This is a concealed belt rigged with military-grade explosives surrounded by nails and ball bearings, and a detonator. Use it to end your pathetic life with one final aloha snackbar.\n\nLMB to suicide"
 SWEP.Author			= ""
 SWEP.Contact		= ""
 SWEP.Purpose		= ""
-SWEP.BobScale=2
-SWEP.SwayScale=2
-SWEP.Weight	= 3
-SWEP.AutoSwitchTo		= true
-SWEP.AutoSwitchFrom		= false
+SWEP.BobScale		= 2
+SWEP.SwayScale		= 2
+SWEP.Weight			= 3
+SWEP.AutoSwitchTo	= true
+SWEP.AutoSwitchFrom	= false
 
 SWEP.Category = "ZCity Other"
 SWEP.Spawnable = true
@@ -77,7 +77,9 @@ SWEP.Secondary.ClipSize		= -1
 SWEP.Secondary.DefaultClip	= -1
 SWEP.Secondary.Automatic   	= false
 SWEP.Secondary.Ammo         = "none"
-SWEP.CarryWeight=3500
+SWEP.CarryWeight			= 3500
+
+SWEP.WorkWithFake 			= true
 
 -- Explosion properties
 SWEP.BlastDis = 16
@@ -229,6 +231,7 @@ end
 
 function SWEP:Initialize()
 	self:SetHoldType("normal")
+	self:SetNoDraw(true)
 end
 
 function SWEP:SetupDataTables()
