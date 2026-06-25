@@ -49,7 +49,7 @@ function MODE:AssignTeams()
 
     for i = 1, numPlayers do
         local ply = players[i]
-        if not IsValid(ply) then continue end
+        if not IsValid(ply) or ply:GetInfoNum("hg_notraitor", 0) == 1 then continue end
 
         if shooterCount < shooters then
             shooterCount = shooterCount + 1
