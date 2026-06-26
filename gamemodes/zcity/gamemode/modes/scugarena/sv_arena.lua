@@ -12,7 +12,7 @@ util.AddNetworkString("scugarena_start")
 util.AddNetworkString("scugarena_end")
 
 function MODE:CanLaunch()
-    return true
+    return false
 end
 
 function MODE:Intermission()

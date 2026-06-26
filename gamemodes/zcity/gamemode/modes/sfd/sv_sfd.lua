@@ -18,7 +18,7 @@ util.AddNetworkString("supfight_start")
 util.AddNetworkString("supfight_end")
 
 function MODE:CanLaunch()
-    return true
+    return false
 end
 
 function MODE:Intermission()

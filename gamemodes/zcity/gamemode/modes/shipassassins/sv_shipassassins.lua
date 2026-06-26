@@ -25,6 +25,10 @@ local contractWarningLines = {
 	"[Assassin's Greed] Personally killing your target pays $250. Press F3 to open the buy menu."
 }
 
+function MODE.CanLaunch()
+	return false
+end
+
 local shopItemMap = {}
 for _, item in ipairs(MODE.ShopItems or {}) do
 	shopItemMap[item.id] = item

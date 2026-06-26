@@ -23,7 +23,7 @@ local function IsDeathmatchZoneMode(round)
 end
 
 function MODE:CanLaunch()
-    return true
+    return false
 end
 
 function MODE:Intermission()

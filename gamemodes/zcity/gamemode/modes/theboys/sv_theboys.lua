@@ -13,13 +13,7 @@ util.AddNetworkString("theboys_end")
 util.AddNetworkString("theboys_hunt_begin")
 
 function MODE:CanLaunch()
-    local active = 0
-    for _, ply in player.Iterator() do
-        if ply:Team() ~= TEAM_SPECTATOR then
-            active = active + 1
-        end
-    end
-    return active >= 2
+    return false
 end
 
 function MODE:Intermission()
